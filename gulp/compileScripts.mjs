@@ -27,14 +27,4 @@ const compileMainScripts = () =>
       .pipe(sourcemaps.write('.'))
       .pipe(gulp.dest('build/js'));
 
-const compileVendorScripts = () =>
-  browserify('source/js/vendor.js')
-      .transform('babelify', {presets: ['@babel/preset-env']})
-      .bundle()
-      .pipe(vinylSourceStream('vendor.js'))
-      .pipe(vinylBuffer())
-      .pipe(uglify())
-      .pipe(concat('vendor.min.js'))
-      .pipe(gulp.dest('build/js'));
-
-export {compileMainMinScripts, compileMainScripts, compileVendorScripts};
+export {compileMainMinScripts, compileMainScripts};

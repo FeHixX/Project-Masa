@@ -1,36 +1,81 @@
 <!DOCTYPE html>
 <html lang="ru">
+
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Описание проекта">
-    <title>ProjectName</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./favicon.ico">
+    <link rel="icon" href="./favicon/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="./favicon/apple.png">
+    <link rel="manifest" href="./manifest.webmanifest">
+    <link rel="preload" href="./fonts/manrope-light.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/manrope-regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/manrope-medium.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <meta name="description" content="повышение квалификации, стажировки, волонтёрство, учёба, карьера, путешествия">
+    <title>Маса</title>
     <link rel="stylesheet" href="css/style.min.css">
   </head>
+
   <body>
     <div class="wrapper">
-      <header>
-        <div class="container"></div>
+      <header class="header">
+        <div class="header__container container"></div>
       </header>
-      <main>
-        <section class="intro">
-          <div class="container">
-            <h1>Тестовая страница.</h1>
-            <p>На данной странице показан пример модальных окон.</p>
-            <p>Перед началом разработки не забудьте удалить всё содержимое &#8249;main&#8250;&#8249;&#8260;main&#8250;.</p>
-            <p><a class="btn" href="#" data-open-modal="feedback">modal--feedback link</a></p>
-            <p><a class="btn" href="#" data-open-modal="success">modal--success link</a></p>
+
+      <main class="main">
+        <h1 class="visually-hidden">Образовательный проект в Израиле: «Маса».</h1>
+        <section class="hero">
+          <h2 class="visually-hidden">Популярные программы.</h2>
+        </section>
+        <section class="about">
+          <div class="about__container container">
+            <h2 class="about__title title">О&nbsp;проекте &laquo;Маса&raquo;</h2>
+          </div>
+        </section>
+        <section class="programs">
+          <div class="programs__container container">
+            <h2 class="programs__title title">Программы</h2>
+          </div>
+        </section>
+        <section class="grant">
+          <div class="grant__container container">
+            <h2 class="grant__title title">Как поехать</h2>
+          </div>
+        </section>
+        <section class="news">
+          <div class="news__container container">
+            <h2 class="news__title title">Новости и&nbsp;материалы</h2>
+          </div>
+        </section>
+        <section class="faq">
+          <div class="faq__container container">
+            <h2 class="faq__title title">Вопросы и&nbsp;ответы</h2>
+          </div>
+        </section>
+        <section class="reviews">
+          <div class="reviews__container container">
+            <h2 class="reviews__title title">Отзывы</h2>
+          </div>
+        </section>
+        <section class="contacts">
+          <div class="contacts__container container">
+            <h2 class="contacts__title title">Контакты</h2>
+          </div>
+        </section>
+        <section class="feedback">
+          <div class="feedback__container container">
+            <h2 class="feedback__title title">Напишите нам</h2>
           </div>
         </section>
       </main>
-      <footer>
-        <div class="container"></div>
+
+      <footer class="footer">
+        <div class="footer__container container"></div>
       </footer>
     </div>
 
-    <!-- Модалки -->
-    <div class="modal modal--preload" data-modal="feedback">
+    <div class="modal modal--preload" data-modal="feedback"> // на кнопку data-open-modal="feedback"
       <div class="modal__wrapper">
         <div class="modal__overlay" data-close-modal></div>
         <div class="modal__content">
@@ -44,21 +89,7 @@
       </div>
     </div>
 
-    <div class="modal modal--preload modal--fit-content modal--no-scale" data-modal="success">
-      <div class="modal__wrapper">
-        <div class="modal__overlay" data-close-modal></div>
-        <div class="modal__content">
-          <p class="modal__description">Размер этой модалки зависит от ширины контента,<br> отключена анимация-скейл</p>
-          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-            <svg width="15" height="15">
-              <use xlink:href="img/sprite.svg#icon-close"></use>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>
   </body>
+
 </html>
