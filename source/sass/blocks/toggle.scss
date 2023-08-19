@@ -1,0 +1,129 @@
+.toggle {
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+  padding: 19px 69px 19px 19px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 14px;
+  text-align: left;
+  color: $color-cerulean-blue;
+  text-transform: uppercase;
+  letter-spacing: 0.28px;
+  background-color: $color-default-white;
+  border: 1px solid $color-cerulean-blue;
+  border-radius: 30px;
+  outline: none;
+  cursor: pointer;
+  transition: all $trans-default;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    width: 46px;
+    height: 46px;
+    background-color: $color-cerulean-blue;
+    border-radius: 50%;
+    transition: all $trans-default;
+  }
+
+  @include hover-focus {
+    color: $color-default-white;
+    background-color: $color-cerulean-blue;
+
+    &::before {
+      background-color: $color-default-white;
+    }
+
+    .toggle__icon-menu {
+      color: $color-cerulean-blue;
+    }
+  }
+
+  @include active {
+    color: rgba($color-default-white, 0.7);
+    background-color: $color-cerulean-blue;
+
+    &::before {
+      background-color: $color-default-white;
+    }
+
+    .toggle__icon-menu {
+      color: $color-cerulean-blue;
+    }
+  }
+}
+
+.toggle.is-opened {
+  margin-left: -52px;
+  padding-right: 221px;
+  color: $color-default-white;
+  background-color: $color-cerulean-blue;
+
+  &::before {
+    background-color: $color-default-white;
+  }
+
+  @include mobile {
+    padding-right: 225px;
+  }
+
+  @include hover-focus {
+    color: $color-cerulean-blue;
+    background-color: $color-default-white;
+
+    &::before {
+      background-color: $color-cerulean-blue;
+    }
+
+    .toggle__icon-cross {
+      color: $color-default-white;
+    }
+  }
+
+  @include active {
+    color: rgba($color-cerulean-blue, 0.7);
+    background-color: $color-default-white;
+
+    &::before {
+      background-color: $color-cerulean-blue;
+    }
+
+    .toggle__icon-cross {
+      color: $color-default-white;
+    }
+  }
+}
+
+.toggle__icon-menu {
+  position: absolute;
+  top: 0;
+  right: 16px;
+  bottom: 0;
+  left: auto;
+  margin: auto;
+  color: $color-default-white;
+  transition: all $trans-default;
+}
+
+.toggle__icon-cross {
+  position: absolute;
+  top: 0;
+  right: 16px;
+  bottom: 0;
+  left: auto;
+  display: none;
+  margin: auto;
+  color: $color-cerulean-blue;
+  transition: all $trans-default;
+}
+
+.toggle.is-opened .toggle__icon-menu {
+  display: none;
+}
+
+.toggle.is-opened .toggle__icon-cross {
+  display: block;
+}

@@ -20,7 +20,85 @@
   <body>
     <div class="wrapper">
       <header class="header">
-        <div class="header__container container"></div>
+        <div class="header__container container">
+          <a class="header__logo" href="./" aria-label="Логотип сайта: «Маса».">
+            <svg class="header__logo-image" width="52" height="52" aria-hidden="true" focusable="false">
+              <use href="./img/sprite.svg#logo"></use>
+            </svg>
+          </a>
+          <button class="header__toggle toggle" type="button">
+            Меню
+            <svg class="toggle__icon-menu" width="20" height="20" aria-hidden="true" focusable="false">
+              <use href="./img/sprite.svg#menu"></use>
+            </svg>
+            <svg class="toggle__icon-cross" width="20" height="20" aria-hidden="true" focusable="false">
+              <use href="./img/sprite.svg#cross"></use>
+            </svg>
+          </button>
+          <nav class="header__nav nav">
+            <ul class="nav__list" data-accordion="parent">
+              <li class="nav__item">
+                <a class="nav__link" href="#!">О&nbsp;проекте</a>
+              </li>
+              <li class="nav__item" data-accordion="element">
+                <a class="nav__link nav__link--button" href="#!" data-accordion="button">
+                  Программы
+                  <svg class="nav__icon-menu" width="12" height="12" aria-hidden="true" focusable="false">
+                    <use href="./img/sprite.svg#arrow-down"></use>
+                  </svg>
+                </a>
+                <ul class="nav__subnav-list" data-accordion="content">
+                  <li class="nav__item">
+                    <a class="nav__link" href="#!">Стажировки</a>
+                  </li>
+                  <li class="nav__item">
+                    <a class="nav__link" href="#!">Волонтёрство</a>
+                  </li>
+                  <li class="nav__item">
+                    <a class="nav__link" href="#!">Учёба</a>
+                  </li>
+                  <li class="nav__item">
+                    <a class="nav__link" href="#!">Религия</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#!">Как поехать</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#!">Отзывы</a>
+              </li>
+              <li class="nav__item" data-accordion="element">
+                <a class="nav__link nav__link--button" href="#!" data-accordion="button">
+                  Новости
+                  <svg class="nav__icon-menu" width="12" height="12" aria-hidden="true" focusable="false">
+                    <use href="./img/sprite.svg#arrow-down"></use>
+                  </svg>
+                </a>
+                <ul class="nav__subnav-list" data-accordion="content">
+                  <li class="nav__item">
+                    <a class="nav__link" href="#!">Общее</a>
+                  </li>
+                  <li class="nav__item">
+                    <a class="nav__link" href="#!">Волонтёрство</a>
+                  </li>
+                  <li class="nav__item">
+                    <a class="nav__link" href="#!">Стажировки</a>
+                  </li>
+                  <li class="nav__item">
+                    <a class="nav__link" href="#!">Карьера</a>
+                  </li>
+                  <li class="nav__item">
+                    <a class="nav__link" href="#!">Путешествия</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#!">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </header>
 
       <main class="main">
@@ -28,22 +106,22 @@
         <section class="hero">
           <h2 class="visually-hidden">Популярные программы.</h2>
         </section>
-        <section class="about">
+        <section class="about" id="about">
           <div class="about__container container">
             <h2 class="about__title title">О&nbsp;проекте &laquo;Маса&raquo;</h2>
           </div>
         </section>
-        <section class="programs">
+        <section class="programs" id="programs">
           <div class="programs__container container">
             <h2 class="programs__title title">Программы</h2>
           </div>
         </section>
-        <section class="grant">
+        <section class="grant" id="grant">
           <div class="grant__container container">
             <h2 class="grant__title title">Как поехать</h2>
           </div>
         </section>
-        <section class="news">
+        <section class="news" id="news">
           <div class="news__container container">
             <h2 class="news__title title">Новости и&nbsp;материалы</h2>
           </div>
@@ -53,12 +131,12 @@
             <h2 class="faq__title title">Вопросы и&nbsp;ответы</h2>
           </div>
         </section>
-        <section class="reviews">
+        <section class="reviews" id="reviews">
           <div class="reviews__container container">
             <h2 class="reviews__title title">Отзывы</h2>
           </div>
         </section>
-        <section class="contacts">
+        <section class="contacts" id="contacts">
           <div class="contacts__container container">
             <h2 class="contacts__title title">Контакты</h2>
           </div>
