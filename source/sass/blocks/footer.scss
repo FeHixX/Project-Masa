@@ -1,0 +1,219 @@
+.footer {
+  background-color: $color-alabaster;
+}
+
+.footer__container {
+  display: grid;
+  align-items: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  gap: 23px 50px;
+  grid-template-columns: min-content 1fr auto;
+
+  @include tablet {
+    padding-top: 49px;
+    padding-bottom: 49px;
+    gap: 24px 50px;
+    grid-template-columns: min-content 1fr;
+  }
+
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+    padding-top: 16px;
+    padding-bottom: 40px;
+    gap: 14px;
+  }
+}
+
+.footer__logo {
+  color: $color-cerulean-blue;
+  background-color: $color-default-white;
+  border-radius: 50%;
+  outline: none;
+  transition: all $trans-default;
+
+  @include mobile {
+    margin: 0 0 1px;
+  }
+
+  @include hover-focus {
+    color: $color-default-white;
+    background-color: $color-cerulean-blue;
+  }
+
+  @include active {
+    color: rgba($color-default-white, 0.7);
+  }
+}
+
+.footer__logo-image {
+  display: block;
+}
+
+.footer__menu-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  gap: 5px 26px;
+
+  @include tablet {
+    line-height: 20px;
+    gap: 5px 11px;
+    justify-self: end;
+  }
+
+  @include mobile {
+    justify-content: center;
+    font-size: 14px;
+    gap: 10px 26px;
+  }
+}
+
+.footer__menu-link {
+  padding: 2px;
+  outline: none;
+  transition: color $trans-default;
+
+  @include hover-focus {
+    color: $color-cerulean-blue;
+  }
+
+  @include active {
+    color: $color-endeavour;
+  }
+}
+
+.footer__social-list {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 148px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  gap: 5px 20px;
+
+  @include tablet {
+    max-width: 260px;
+    gap: 5px 10px;
+    grid-area: 2/1/3/3;
+    justify-self: end;
+  }
+
+  @include mobile {
+    justify-content: center;
+    order: 1;
+    max-width: 100%;
+  }
+}
+
+.footer__social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 36px;
+  height: 36px;
+  color: $color-default-white;
+  background-color: $color-cerulean-blue;
+  border-radius: 50%;
+  outline: none;
+  transition: all $trans-default;
+
+  svg {
+    display: block;
+  }
+
+  @include mobile {
+    width: 26px;
+    height: 26px;
+
+    svg {
+      width: 12px;
+      height: 12px;
+    }
+  }
+
+  @include hover-focus {
+    color: rgba($color-default-white, 0.7);
+  }
+
+  @include active {
+    color: $color-default-white;
+    background-color: $color-endeavour;
+  }
+}
+
+.footer__bottom {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  line-height: 18px;
+  grid-area: 2/1/3/-1;
+
+  @include tablet {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    font-size: 12px;
+    line-height: 12px;
+    gap: 10px 0;
+    grid-area: 2/1/3/3;
+    justify-self: start;
+  }
+
+  @include mobile {
+    align-items: center;
+    line-height: 14px;
+  }
+}
+
+.footer__copyright {
+  margin: 4px 0 0;
+
+  @include tablet {
+    margin: 0;
+    opacity: 0.6;
+  }
+}
+
+.footer__link-politics {
+  position: relative;
+  padding: 2px 0;
+  outline: none;
+  transition: color $trans-default;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background-color: $color-charcoal;
+    transition: background-color $trans-default;
+  }
+
+  @include tablet {
+    &::before {
+      bottom: 1px;
+    }
+  }
+
+  @include hover-focus {
+    color: $color-cerulean-blue;
+    text-decoration: underline;
+
+    &::before {
+      background-color: $color-cerulean-blue;
+    }
+  }
+
+  @include active {
+    color: $color-endeavour;
+    text-decoration: none;
+
+    &::before {
+      background-color: $color-endeavour;
+    }
+  }
+}
