@@ -1,0 +1,247 @@
+:root {
+  --swiper-pagination-bullet-horizontal-gap: 0;
+}
+
+.hero {
+  margin-top: -94px;
+  background-color: $color-hawkes-blue;
+
+  @include tablet {
+    margin-top: -114px;
+  }
+
+  @include mobile {
+    margin-top: -94px;
+  }
+}
+
+.hero__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.hero__item {
+  display: flex;
+  height: auto;
+}
+
+.hero__content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding-top: 409px;
+  padding-bottom: 60px;
+
+  h3 {
+    max-width: calc(78% + 1px);
+    margin: 0;
+    padding: 40px 50px 30px;
+    font-weight: 400;
+    font-size: 54px;
+    line-height: 62px;
+    color: $color-cerulean-blue;
+    background-color: $color-default-white;
+    border-radius: 0 30px 30px 0;
+  }
+
+  @include tablet {
+    padding-top: 676px;
+    padding-bottom: 60px;
+
+    h3 {
+      max-width: calc(97% + 1px);
+      margin: 0;
+      padding: 31px 40px 23px;
+      font-size: 36px;
+      line-height: 44px;
+    }
+  }
+
+  @include mobile {
+    padding-top: 233px;
+    padding-bottom: 20px;
+
+    h3 {
+      max-width: 100%;
+      margin: 0;
+      padding: 20px 14px 16px;
+      font-size: 22px;
+      line-height: 26px;
+      border-radius: 0 16px 16px 0;
+    }
+  }
+}
+
+.hero__content .hero__pagination {
+  position: relative;
+  bottom: 0;
+  display: flex;
+  width: auto;
+  padding: 14px 20px;
+  background-color: $color-default-white;
+  border-radius: 20px 20px 0 0;
+  gap: 0 12px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    right: -20px;
+    bottom: 0;
+    width: 20px;
+    height: 20px;
+    background-image: url('data:image/svg+xml,\<svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">\<path d="M20 20C8.95431 20 0 11.0457 0 0V20H20Z" fill="white"/>\</svg>');
+  }
+
+  @include mobile {
+    padding: 10px 16px;
+    border-radius: 12px 12px 0 0;
+
+    &::before {
+      right: -8px;
+      width: 8px;
+      height: 8px;
+    }
+  }
+}
+
+.hero__pagination .hero__pagination-button {
+  width: 10px;
+  height: 10px;
+  margin: var(--swiper-pagination-bullet-horizontal-gap);
+  background-color: $color-transparent;
+  border: 1px solid $color-cerulean-blue;
+  outline: none;
+  opacity: 1;
+
+  @include mobile {
+    width: 8px;
+    height: 8px;
+  }
+}
+
+.hero__slider .swiper-pagination-bullet-active {
+  background-color: $color-cerulean-blue;
+}
+
+.hero__bottom {
+  position: relative;
+  display: flex;
+  margin: -7px 468px 0 0;
+  padding: 0 50px 28px;
+  background-color: $color-default-white;
+  border-radius: 0 0 30px 30px;
+  gap: 0 30px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 7px;
+    right: -26px;
+    width: 26px;
+    height: 26px;
+    background-image: url('data:image/svg+xml,\<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">\<path d="M26 0C11.6406 0 0 11.6406 0 26V0H26Z" fill="white"/>\</svg>');
+  }
+
+  p {
+    width: 446px;
+    margin: 0;
+  }
+
+  @include tablet {
+    margin: -4px 87px 0 0;
+    padding: 0 40px 32px;
+
+    &::before {
+      top: 4px;
+    }
+
+    p {
+      width: 100%;
+      line-height: 20px;
+    }
+  }
+
+  @include mobile {
+    flex-direction: column;
+    margin: -5px 0 0;
+    padding: 0;
+    background-color: $color-transparent;
+
+    &::before {
+      content: none;
+    }
+
+    p {
+      position: relative;
+      max-width: 90%;
+      padding: 0 14px 10px;
+      font-size: 14px;
+      background-color: $color-default-white;
+      border-radius: 0 0 14px 0;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 5px;
+        right: -10px;
+        width: 10px;
+        height: 10px;
+        background-image: url('data:image/svg+xml,\<svg width="10" height="10" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">\<path d="M26 0C11.6406 0 0 11.6406 0 26V0H26Z" fill="white"/>\</svg>');
+      }
+    }
+  }
+}
+
+.hero__button-container {
+  align-self: center;
+  margin: -1px 0 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -10px;
+    width: 10px;
+    height: 10px;
+    background-image: url('data:image/svg+xml,\<svg width="10" height="10" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">\<path d="M26 0C11.6406 0 0 11.6406 0 26V0H26Z" fill="white"/>\</svg>');
+  }
+
+  @include tablet {
+    align-self: flex-start;
+    margin: 4px 0 0;
+  }
+
+  @include mobile {
+    position: relative;
+    max-width: 63%;
+    margin: 0;
+    padding: 10px 15px;
+    background-color: $color-default-white;
+    border-radius: 0 0 14px 14px;
+  }
+}
+
+.hero__background {
+  position: absolute;
+  z-index: -1;
+  display: flex;
+  width: 100%;
+  height: 100%;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: $overlay-blue;
+    inset: 0;
+  }
+
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+}

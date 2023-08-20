@@ -1,0 +1,140 @@
+.button {
+  position: relative;
+  display: inline-block;
+  padding: 19px 79px 19px 29px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 14px;
+  color: $color-cerulean-blue;
+  text-transform: uppercase;
+  letter-spacing: 0.28px;
+  background-color: $color-transparent;
+  border: 1px solid $color-cerulean-blue;
+  border-radius: 30px;
+  outline: none;
+  cursor: pointer;
+  transition:
+    color $trans-default,
+    background-color $trans-default;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 3px;
+    width: 46px;
+    height: 46px;
+    background-color: $color-cerulean-blue;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    transition: background-color $trans-default;
+  }
+
+  svg {
+    position: absolute;
+    top: 0;
+    right: 21px;
+    bottom: 0;
+    left: auto;
+    margin: auto 0;
+    color: $color-default-white;
+    transition:
+      color $trans-default,
+      transform $trans-default;
+    stroke-width: 2px;
+  }
+
+  @include mobile {
+    padding: 15px 57px 13px 19px;
+    font-size: 12px;
+    line-height: 12px;
+    letter-spacing: 0.24px;
+
+    &::before {
+      right: 3px;
+      width: 34px;
+      height: 34px;
+    }
+
+    svg {
+      right: 15px;
+    }
+  }
+
+  @include hover-focus {
+    background-color: $color-cerulean-blue;
+    color: $color-default-white;
+
+    &::before {
+      background-color: $color-default-white;
+    }
+
+    svg {
+      color: $color-cerulean-blue;
+      transform: rotate(45deg);
+    }
+  }
+
+  @include active {
+    background-color: $color-cerulean-blue;
+    color: rgba($color-default-white, 0.7);
+
+    &::before {
+      background-color: $color-default-white;
+    }
+
+    svg {
+      color: $color-cerulean-blue;
+      transform: rotate(45deg);
+    }
+  }
+
+  @include disabled {
+    pointer-events: none;
+    border-color: $color-mischka;
+    color: $color-mischka;
+
+    &::before {
+      background-color: $color-mischka;
+    }
+  }
+
+  &--secondary {
+    color: $color-default-white;
+    border: 1px solid $color-default-white;
+
+    &::before {
+      background-color: $color-default-white;
+    }
+
+    svg {
+      color: $color-cerulean-blue;
+    }
+
+    @include hover-focus {
+      color: $color-cerulean-blue;
+      background-color: $color-default-white;
+
+      &::before {
+        background-color: $color-cerulean-blue;
+      }
+
+      svg {
+        color: $color-default-white;
+      }
+    }
+
+    @include active {
+      color: rgba($color-cerulean-blue, 0.7);
+      background-color: $color-default-white;
+
+      &::before {
+        background-color: $color-cerulean-blue;
+      }
+
+      svg {
+        color: $color-default-white;
+      }
+    }
+  }
+}

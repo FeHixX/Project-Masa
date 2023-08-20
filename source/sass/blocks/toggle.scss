@@ -1,57 +1,50 @@
 .toggle {
-  position: relative;
-  z-index: 2;
-  display: inline-block;
+  z-index: 1;
   padding: 19px 69px 19px 19px;
-  font-weight: 500;
   font-size: 14px;
   line-height: 14px;
-  text-align: left;
-  color: $color-cerulean-blue;
-  text-transform: uppercase;
   letter-spacing: 0.28px;
   background-color: $color-default-white;
-  border: 1px solid $color-cerulean-blue;
-  border-radius: 30px;
-  outline: none;
-  cursor: pointer;
   transition: all $trans-default;
 
   &::before {
-    content: "";
-    position: absolute;
-    top: 3px;
-    right: 3px;
     width: 46px;
     height: 46px;
-    background-color: $color-cerulean-blue;
-    border-radius: 50%;
-    transition: all $trans-default;
+  }
+
+  @include tablet {
+    padding: 19px 69px 19px 19px;
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: 0.28px;
+
+    &::before {
+      width: 46px;
+      height: 46px;
+    }
+  }
+
+  @include mobile {
+    padding: 19px 69px 19px 19px;
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: 0.28px;
+
+    &::before {
+      width: 46px;
+      height: 46px;
+    }
   }
 
   @include hover-focus {
-    color: $color-default-white;
-    background-color: $color-cerulean-blue;
-
-    &::before {
-      background-color: $color-default-white;
-    }
-
-    .toggle__icon-menu {
-      color: $color-cerulean-blue;
+    svg {
+      transform: rotate(0);
     }
   }
 
   @include active {
-    color: rgba($color-default-white, 0.7);
-    background-color: $color-cerulean-blue;
-
-    &::before {
-      background-color: $color-default-white;
-    }
-
-    .toggle__icon-menu {
-      color: $color-cerulean-blue;
+    svg {
+      transform: rotate(0);
     }
   }
 }
@@ -97,7 +90,7 @@
   }
 }
 
-.toggle__icon-menu {
+.toggle .toggle__icon-menu {
   position: absolute;
   top: 0;
   right: 16px;
@@ -108,7 +101,7 @@
   transition: all $trans-default;
 }
 
-.toggle__icon-cross {
+.toggle .toggle__icon-cross {
   position: absolute;
   top: 0;
   right: 16px;

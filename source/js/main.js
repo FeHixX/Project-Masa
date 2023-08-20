@@ -4,6 +4,7 @@ import {Form} from './modules/form-validate/form';
 import {initAccordions} from './vendor/accordion/init-accordion';
 
 import {addToggleMenu} from './modules/header/menu';
+import {addHeroSlider} from './modules/hero/slider';
 
 // ---------------------------------
 
@@ -25,8 +26,10 @@ window.addEventListener('DOMContentLoaded', () => {
     window.form = form;
     form.init();
 
-    addToggleMenu();
     initAccordions();
+
+    addToggleMenu();
+    addHeroSlider();
   });
 });
 
