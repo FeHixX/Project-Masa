@@ -187,7 +187,41 @@
         </section>
         <section class="about" id="about">
           <div class="about__container container">
-            <h2 class="about__title title">О&nbsp;проекте &laquo;Маса&raquo;</h2>
+            <div class="about__body-header">
+              <h2 class="about__title title">О&nbsp;проекте &laquo;Маса&raquo;</h2>
+              <p>&laquo;Маса&raquo;&nbsp;&mdash; совместный проект правительства Израиля и&nbsp;Еврейского агентства Сохнут.</p>
+            </div>
+            <div class="about__body-text">
+              <h3>Наша цель</h3>
+              <p>Наша деятельность направлена на&nbsp;повышение квалификации молодых специалистов на&nbsp;ранних и&nbsp;средних стадиях карьеры, предоставляя им&nbsp;инструменты для решения сложных проблем, с&nbsp;которыми сталкиваются Израиль и&nbsp;еврейские общины во&nbsp;всем мире. Цель центра&nbsp;&mdash; наделить этих людей способностью инициировать значимые изменения.</p>
+              <button class="about__button button" type="button" data-open-modal="feedback">
+                подробнее о&nbsp;проекте
+                <svg width="10" height="10" aria-hidden="true" focusable="false">
+                  <use href="./img/sprite.svg#arrow"></use>
+                </svg>
+              </button>
+            </div>
+            <section class="about__features features">
+              <h2 class="visually-hidden">Преимущества.</h2>
+              <ul class="features__list">
+                <li class="features__item">
+                  <h3>Более 250 программ</h3>
+                  <p>учебных и&nbsp;рабочих, разной длительностью от&nbsp;3&nbsp;месяцев до&nbsp;1&nbsp;года</p>
+                </li>
+                <li class="features__item">
+                  <h3>Более 3000 участников</h3>
+                  <p>уже успешно прошли программу от&nbsp;&laquo;Маса&raquo; и&nbsp;остались в&nbsp;Израиле</p>
+                </li>
+                <li class="features__item">
+                  <h3>от&nbsp;4&nbsp;200&nbsp;$ до&nbsp;8&nbsp;400&nbsp;$</h3>
+                  <p>грант всем участникам для комфортного прохождения программы</p>
+                </li>
+                <li class="features__item">
+                  <h3>Участники из&nbsp;60&nbsp;стран</h3>
+                  <p>студенты со&nbsp;всего мира&nbsp;приезжают на&nbsp;программу &laquo;Маса&raquo;</p>
+                </li>
+              </ul>
+            </section>
           </div>
         </section>
         <section class="programs" id="programs">
@@ -285,14 +319,69 @@
       </footer>
     </div>
 
-    <div class="modal modal--preload" data-modal="feedback"> // на кнопку data-open-modal="feedback"
+    <div class="modal modal--preload" data-modal="feedback">
       <div class="modal__wrapper">
         <div class="modal__overlay" data-close-modal></div>
         <div class="modal__content">
-          <p class="modal__description">Обычная модалка</p>
-          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-            <svg width="15" height="15">
-              <use xlink:href="img/sprite.svg#icon-close"></use>
+          <h2 class="modal__title">Напишите нам</h2>
+          <p class="modal__text">Оставьте ваши контакты, если у&nbsp;вас остались вопросы&nbsp;&mdash; мы&nbsp;на&nbsp;них ответим!</p>
+          <div class="modal__form" data-form-validate="data-form-validate" data-callback="base">
+            <form action="https://echo.htmlacademy.ru/" method="post" autocomplete="off" novalidate>
+
+              <div class="custom-input" data-validate-type="text" data-limitation="name" data-required>
+                <label>
+                  <span class="custom-input__label">Имя</span>
+                  <input type="text" name="user-name-1">
+                </label>
+              </div>
+
+              <div class="custom-input" data-validate-type="phone" data-on-input-validate="" data-required data-phone-length="18">
+                <label><span class="custom-input__label">Телефон</span>
+                  <input type="tel" name="user-phone" class="">
+                </label>
+              </div>
+
+              <div class="custom-select" data-select="" data-validate-type="select" data-name="some-name" data-id="id-example-2" data-required>
+                <span class="custom-select__label">Выберите город</span>
+                <button class="custom-select__button" type="button" aria-label="Выберите одну из опций">
+                  <span class="custom-select__text"></span>
+                  <span class="custom-select__icon"></span>
+                </button>
+                <ul class="custom-select__list" role="listbox">
+                  <li class="custom-select__item" tabindex="0" data-select-value="id-1" aria-selected="false" role="option">Санкт-Петербург</li>
+                  <li class="custom-select__item" tabindex="0" data-select-value="id-2" aria-selected="false" role="option">Санкт-Петербург</li>
+                  <li class="custom-select__item" tabindex="0" data-select-value="id-3" aria-selected="false" role="option">Санкт-Петербург</li>
+                  <li class="custom-select__item" tabindex="0" data-select-value="id-4" aria-selected="false" role="option">Санкт-Петербург</li>
+                </ul>
+                <select id="id-example-2" name="some-name" tabindex="-1" aria-hidden="true">
+                  <option value="">&nbsp;</option>
+                  <option value="id-1">Санкт-Петербург</option>
+                  <option value="id-2">Санкт-Петербург</option>
+                  <option value="id-3">Санкт-Петербург</option>
+                  <option value="id-4">Санкт-Петербург</option>
+                </select>
+              </div>
+
+              <div class="custom-toggle custom-toggle--checkbox" data-validate-type="checkbox" data-required>
+                <label>
+                  <input type="checkbox" value="user-agreement-1" name="user-agreement">
+                  <span class="custom-toggle__icon"></span>
+                  <span class="custom-toggle__label">Я&nbsp;согласен на&nbsp;обработку моих персональных данных</span>
+                </label>
+              </div>
+
+              <button class="modal__button button" type="submit">
+                Отправить
+                <svg width="10" height="10" aria-hidden="true" focusable="false">
+                  <use href="./img/sprite.svg#arrow"></use>
+                </svg>
+              </button>
+
+            </form>
+          </div>
+          <button class="modal__close-btn" type="button" aria-label="Закрыть попап" data-close-modal>
+            <svg width="18" height="18">
+              <use href="./img/sprite.svg#cross"></use>
             </svg>
           </button>
         </div>

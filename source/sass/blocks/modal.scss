@@ -11,7 +11,7 @@
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 
-  background-color: rgba($color-default-black, 0.8);
+  background-color: $overlay-dark;
   transform: scale(1.2);
   visibility: hidden;
   opacity: 0;
@@ -52,10 +52,10 @@
   align-items: center;
   width: 100%;
   min-height: 100%;
-  padding: 60px 40px;
+  padding: 45px;
 
   @include mobile {
-    padding: 60px 16px;
+    padding: 15px;
   }
 }
 
@@ -73,14 +73,14 @@
 .modal__content {
   position: relative;
 
-  width: 600px;
-  padding: 40px;
+  width: 510px;
+  padding: 60px 80px;
 
   background-color: $color-default-white;
 
   @include mobile {
     width: 100%;
-    padding: 20px;
+    padding: 40px 15px;
   }
 }
 
