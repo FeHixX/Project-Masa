@@ -5,7 +5,7 @@
 .about__container {
   display: grid;
   padding-top: 118px;
-  padding-bottom: 60px;
+  padding-bottom: 62px;
   gap: 60px 156px;
   grid-template-columns: 480px 1fr;
 
@@ -17,7 +17,7 @@
 
   @include mobile {
     padding-top: 64px;
-    padding-bottom: 33px;
+    padding-bottom: 35px;
   }
 }
 

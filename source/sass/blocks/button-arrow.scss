@@ -1,0 +1,41 @@
+.button-arrow {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  color: $color-default-white;
+  background-color: $color-cerulean-blue;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+  transition:
+    color $trans-default,
+    background-color $trans-default;
+  stroke-width: 2px;
+
+  svg {
+    position: absolute;
+    margin: auto;
+    transition: transform $trans-default;
+    inset: 0;
+  }
+
+  @include hover-focus {
+    color: $color-cerulean-blue;
+    background-color: $color-default-white;
+
+    svg {
+      transform: rotate(45deg);
+    }
+  }
+
+  @include active {
+    color: rgba($color-cerulean-blue, 0.7);
+  }
+
+  @include disabled {
+    background-color: $color-mischka;
+    pointer-events: none;
+  }
+}
