@@ -74,8 +74,6 @@
   flex-direction: column;
   justify-content: flex-end;
   width: 392px;
-  overflow: hidden;
-  border-radius: 12px;
 
   picture {
     position: relative;
@@ -88,7 +86,12 @@
       height: 100%;
       background-color: rgba(49, 109, 194, 0.2);
       inset: 0;
+      border-radius: 12px;
     }
+  }
+
+  img {
+    border-radius: 12px;
   }
 
   @include tablet {
@@ -121,7 +124,7 @@
       bottom: 0;
       width: 18px;
       height: 18px;
-      background-image: url("data:image/svg+xml,\<svg width=\"18\" height=\"18\" viewBox=\"0 0 18 18\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\<path d=\"M18 18C8.05888 18 0 9.94112 0 0V18H18Z\" fill=\"white\"/>\</svg>");
+      background-image: url('data:image/svg+xml,\<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">\<path d="M18 18C8.05888 18 0 9.94112 0 0V18H18Z" fill="white"/>\</svg>');
     }
   }
 
