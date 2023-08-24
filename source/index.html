@@ -427,7 +427,33 @@
         </section>
         <section class="contacts" id="contacts">
           <div class="contacts__container container">
-            <h2 class="contacts__title title">Контакты</h2>
+            <div class="contacts__heading-container">
+              <h2 class="contacts__title title">Контакты</h2>
+              <ul class="contacts__list">
+                <li class="contacts__item">
+                  <p class="contacts__header">Центральный офис</p>
+                  <p class="contacts__text">г. Новосибирск, ул. Щетинкина&nbsp;68, культурный центр &laquo;Бейт Менахем&raquo;</p>
+                </li>
+                <li class="contacts__item">
+                  <p class="contacts__header">Телефон</p>
+                  <a class="contacts__text contacts__text--link" href="tel:+796387687676">+7 963 876 876 76</a>
+                </li>
+                <li class="contacts__item">
+                  <p class="contacts__header">E-mail</p>
+                  <a class="contacts__text contacts__text--link" href="mailto:info@masa.ru">Info@masa.ru</a>
+                </li>
+              </ul>
+            </div>
+            <div class="contacts__map" id="map">
+              <picture>
+                <source type="image/webp" media="(max-width: 767px)" srcset="./img/contacts/map-mobile@1x.webp, ./img/contacts/map-mobile@2x.webp 2x" width="290" height="240">
+                <source type="image/webp" media="(max-width: 1199px)" srcset="./img/contacts/map-tablet@1x.webp, ./img/contacts/map-tablet@2x.webp 2x" width="678" height="500">
+                <source type="image/webp" srcset="./img/contacts/map-desktop@1x.webp, ./img/contacts/map-desktop@2x.webp 2x" width="1240" height="500">
+                <source media="(max-width: 767px)" srcset="./img/contacts/map-mobile@1x.png, ./img/contacts/map-mobile@2x.png 2x" width="290" height="240">
+                <source media="(max-width: 1199px)" srcset="./img/contacts/map-tablet@1x.png, ./img/contacts/map-tablet@2x.png 2x" width="678" height="500">
+                <img src="./img/contacts/map-desktop@1x.png" srcset="./img/contacts/map-desktop@2x.png 2x" width="1240" height="500" alt="Ардес магазина по адресу г. Новосибирск, ул. Щетинкина 68, культурный центр «Бейт Менахем»">
+              </picture>
+            </div>
           </div>
         </section>
         <section class="feedback">

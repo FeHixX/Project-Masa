@@ -6,6 +6,7 @@ import {initAccordions} from './vendor/accordion/init-accordion';
 import {addToggleMenu} from './modules/header/menu';
 import {addHeroSlider} from './modules/hero/slider';
 import {addProgramsSlider} from './modules/programs/slider';
+import {addContactsMap} from './modules/contacts/map';
 
 // ---------------------------------
 
@@ -23,6 +24,7 @@ window.addEventListener('DOMContentLoaded', () => {
   addToggleMenu();
   addHeroSlider();
   addProgramsSlider();
+  addContactsMap();
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
