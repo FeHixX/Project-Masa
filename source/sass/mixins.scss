@@ -44,6 +44,16 @@
   }
 }
 
+@mixin hover-focus-within {
+  @include hover {
+    @content;
+  }
+
+  @include focus-within {
+    @content;
+  }
+}
+
 @keyframes opacity {
   from {
     opacity: 0;
