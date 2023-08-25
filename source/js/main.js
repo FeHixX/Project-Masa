@@ -7,6 +7,7 @@ import {addToggleMenu} from './modules/header/menu';
 import {addHeroSlider} from './modules/hero/slider';
 import {addProgramsSlider} from './modules/programs/slider';
 import {addContactsMap} from './modules/contacts/map';
+import {addReviewsSlider} from './modules/reviews/slider';
 
 // ---------------------------------
 
@@ -25,6 +26,7 @@ window.addEventListener('DOMContentLoaded', () => {
   addHeroSlider();
   addProgramsSlider();
   addContactsMap();
+  addReviewsSlider();
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана

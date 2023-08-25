@@ -229,6 +229,7 @@
 
 .programs__arrows {
   display: flex;
+  margin-left: auto;
   gap: 0 10px;
 
   @include mobile {
