@@ -66,12 +66,52 @@
     line-height: 20px;
   }
 
+  &:nth-child(2n - 1) {
+    h3 {
+      width: 154px;
+    }
+
+    p {
+      width: 190px;
+    }
+  }
+
+  &:nth-child(2n) {
+    h3 {
+      width: 170px;
+    }
+
+    p {
+      width: 180px;
+    }
+  }
+
   @include tablet {
     flex-direction: column;
     justify-content: flex-start;
     min-width: 264px;
     padding: 30px 30px 25px 29px;
     gap: 7px 0;
+
+    &:nth-child(2n - 1) {
+      h3 {
+        width: auto;
+      }
+
+      p {
+        width: auto;
+      }
+    }
+
+    &:nth-child(2n) {
+      h3 {
+        width: auto;
+      }
+
+      p {
+        width: auto;
+      }
+    }
 
     h3 {
       font-size: 20px;
