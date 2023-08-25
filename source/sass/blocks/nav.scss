@@ -12,7 +12,7 @@
   transition: all $trans-default;
 
   @include mobile {
-    width: 290px;
+    width: calc(100% - 30px);
   }
 }
 

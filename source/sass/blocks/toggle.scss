@@ -60,7 +60,7 @@
   }
 
   @include mobile {
-    padding-right: 225px;
+    padding-right: calc(100% - 65px);
   }
 
   @include hover-focus {
