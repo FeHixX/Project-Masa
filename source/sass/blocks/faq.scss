@@ -6,18 +6,18 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 60px;
+  padding-top: 61px;
   padding-bottom: 62px;
   gap: 67px 0;
 
   @include tablet {
-    padding-top: 50px;
+    padding-top: 49px;
     padding-bottom: 50px;
     gap: 41px 0;
   }
 
   @include mobile {
-    padding-top: 33px;
+    padding-top: 34px;
     padding-bottom: 35px;
     gap: 33px 0;
   }

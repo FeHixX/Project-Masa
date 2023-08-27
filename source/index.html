@@ -366,6 +366,200 @@
         <section class="news" id="news">
           <div class="news__container container">
             <h2 class="news__title title">Новости и&nbsp;материалы</h2>
+            <ul class="news__tabs">
+              <li class="news__tab-item">
+                <button class="news__tab is-active" data-sort="general">Общее</button>
+              </li>
+              <li class="news__tab-item">
+                <button class="news__tab" data-sort="volunteering">Волонтёрство</button>
+              </li>
+              <li class="news__tab-item">
+                <button class="news__tab" data-sort="internships">Стажировки</button>
+              </li>
+              <li class="news__tab-item">
+                <button class="news__tab" data-sort="career">Карьера</button>
+              </li>
+              <li class="news__tab-item">
+                <button class="news__tab" data-sort="journeys">Путешествия</button>
+              </li>
+            </ul>
+            <div class="news__slider swiper">
+              <ul class="news__list swiper-wrapper">
+                <li class="news__item swiper-slide">
+                  <picture>
+                    <source type="image/webp" media="(max-width: 1199px)" srcset="./img/news/interview-tablet@1x.webp, ./img/news/interview-tablet@2x.webp 2x" width="324" height="350">
+                    <source type="image/webp" srcset="./img/news/interview-desktop@1x.webp, ./img/news/interview-desktop@2x.webp 2x" width="604" height="400">
+                    <source media="(max-width: 1199px)" srcset="./img/news/interview-tablet@1x.jpg, ./img/news/interview-tablet@2x.jpg 2x" width="324" height="350">
+                    <img src="./img/news/interview-desktop@1x.jpg" srcset="./img/news/interview-desktop@2x.jpg 2x" width="604" height="400" alt="Девушка держит книгу и смотрит на парня в библиотеке.">
+                  </picture>
+                  <div class="news__content">
+                    <time datetime="2023-03-23">23/03/2023</time>
+                    <h3>Интервью с&nbsp;участницей программы стажировки</h3>
+                    <div class="news__body-text">
+                      <p>Саша рассказывает, как попала в&nbsp;программу и&nbsp;как прошла 6-месячная стажировка в&nbsp;ISOFound</p>
+                      <button class="news__button button-arrow">
+                        <svg width="10" height="10" aria-hidden="true" focusable="false">
+                          <use href="./img/sprite.svg#arrow"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </li>
+                <li class="news__item swiper-slide">
+                  <picture>
+                    <source type="image/webp" media="(max-width: 1199px)" srcset="./img/news/journey-tablet@1x.webp, ./img/news/journey-tablet@2x.webp 2x" width="324" height="350">
+                    <source type="image/webp" srcset="./img/news/journey-desktop@1x.webp, ./img/news/journey-desktop@2x.webp 2x" width="286" height="400">
+                    <source media="(max-width: 1199px)" srcset="./img/news/journey-tablet@1x.jpg, ./img/news/journey-tablet@2x.jpg 2x" width="324" height="350">
+                    <img src="./img/news/journey-desktop@1x.jpg" srcset="./img/news/journey-desktop@2x.jpg 2x" width="286" height="400" alt="Девушка держит книгу и смотрит на парня в библиотеке.">
+                  </picture>
+                  <div class="news__content">
+                    <time datetime="2023-03-20">20/03/2023</time>
+                    <h3>Путешествуем по&nbsp;Израилю</h3>
+                    <div class="news__body-text">
+                      <p>Какие места посещают наши студенты весной</p>
+                      <button class="news__button button-arrow">
+                        <svg width="10" height="10" aria-hidden="true" focusable="false">
+                          <use href="./img/sprite.svg#arrow"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </li>
+                <li class="news__item swiper-slide">
+                  <picture>
+                    <source type="image/webp" media="(max-width: 1199px)" srcset="./img/news/volunteering-tablet@1x.webp, ./img/news/volunteering-tablet@2x.webp 2x" width="324" height="350">
+                    <source type="image/webp" srcset="./img/news/volunteering-desktop@1x.webp, ./img/news/volunteering-desktop@2x.webp 2x" width="286" height="400">
+                    <source media="(max-width: 1199px)" srcset="./img/news/volunteering-tablet@1x.jpg, ./img/news/volunteering-tablet@2x.jpg 2x" width="324" height="350">
+                    <img src="./img/news/volunteering-desktop@1x.jpg" srcset="./img/news/volunteering-desktop@2x.jpg 2x" width="286" height="400" alt="Девушка держит книгу и смотрит на парня в библиотеке.">
+                  </picture>
+                  <div class="news__content">
+                    <time datetime="2023-03-17">17/03/2023</time>
+                    <h3>Новая программа волонтёрства</h3>
+                    <div class="news__body-text">
+                      <p>Программа помощи детям длительностью 4&nbsp;месяца</p>
+                      <button class="news__button button-arrow">
+                        <svg width="10" height="10" aria-hidden="true" focusable="false">
+                          <use href="./img/sprite.svg#arrow"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </li>
+                <li class="news__item swiper-slide">
+                  <picture>
+                    <source type="image/webp" media="(max-width: 1199px)" srcset="./img/news/career-tablet@1x.webp, ./img/news/career-tablet@2x.webp 2x" width="324" height="350">
+                    <source type="image/webp" srcset="./img/news/career-desktop@1x.webp, ./img/news/career-desktop@2x.webp 2x" width="286" height="400">
+                    <source media="(max-width: 1199px)" srcset="./img/news/career-tablet@1x.jpg, ./img/news/career-tablet@2x.jpg 2x" width="324" height="350">
+                    <img src="./img/news/career-desktop@1x.jpg" srcset="./img/news/career-desktop@2x.jpg 2x" width="286" height="400" alt="Девушка держит книгу и смотрит на парня в библиотеке.">
+                  </picture>
+                  <div class="news__content">
+                    <time datetime="2023-03-10">10/03/2023</time>
+                    <h3>Построй свою карьеру</h3>
+                    <div class="news__body-text">
+                      <p>Ведущие компании готовы трудоустроить выпускников стажировки</p>
+                      <button class="news__button button-arrow">
+                        <svg width="10" height="10" aria-hidden="true" focusable="false">
+                          <use href="./img/sprite.svg#arrow"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </li>
+                <li class="news__item news__item--bottom swiper-slide">
+                  <picture>
+                    <source type="image/webp" media="(max-width: 1199px)" srcset="./img/news/journey-tablet@1x.webp, ./img/news/journey-tablet@2x.webp 2x" width="324" height="350">
+                    <source type="image/webp" srcset="./img/news/journey-desktop@1x.webp, ./img/news/journey-desktop@2x.webp 2x" width="286" height="400">
+                    <source media="(max-width: 1199px)" srcset="./img/news/journey-tablet@1x.jpg, ./img/news/journey-tablet@2x.jpg 2x" width="324" height="350">
+                    <img src="./img/news/journey-desktop@1x.jpg" srcset="./img/news/journey-desktop@2x.jpg 2x" width="286" height="400" alt="Девушка держит книгу и смотрит на парня в библиотеке.">
+                  </picture>
+                  <div class="news__content">
+                    <time datetime="2023-03-20">20/03/2023</time>
+                    <h3>Путешествуем по&nbsp;Израилю</h3>
+                    <div class="news__body-text">
+                      <p>Какие места посещают наши студенты весной</p>
+                      <button class="news__button button-arrow">
+                        <svg width="10" height="10" aria-hidden="true" focusable="false">
+                          <use href="./img/sprite.svg#arrow"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </li>
+                <li class="news__item news__item--bottom swiper-slide">
+                  <picture>
+                    <source type="image/webp" media="(max-width: 1199px)" srcset="./img/news/volunteering-tablet@1x.webp, ./img/news/volunteering-tablet@2x.webp 2x" width="324" height="350">
+                    <source type="image/webp" srcset="./img/news/volunteering-desktop@1x.webp, ./img/news/volunteering-desktop@2x.webp 2x" width="286" height="400">
+                    <source media="(max-width: 1199px)" srcset="./img/news/volunteering-tablet@1x.jpg, ./img/news/volunteering-tablet@2x.jpg 2x" width="324" height="350">
+                    <img src="./img/news/volunteering-desktop@1x.jpg" srcset="./img/news/volunteering-desktop@2x.jpg 2x" width="286" height="400" alt="Девушка держит книгу и смотрит на парня в библиотеке.">
+                  </picture>
+                  <div class="news__content">
+                    <time datetime="2023-03-17">17/03/2023</time>
+                    <h3>Новая программа волонтёрства</h3>
+                    <div class="news__body-text">
+                      <p>Программа помощи детям длительностью 4&nbsp;месяца</p>
+                      <button class="news__button button-arrow">
+                        <svg width="10" height="10" aria-hidden="true" focusable="false">
+                          <use href="./img/sprite.svg#arrow"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </li>
+                <li class="news__item news__item--bottom swiper-slide">
+                  <picture>
+                    <source type="image/webp" media="(max-width: 1199px)" srcset="./img/news/career-tablet@1x.webp, ./img/news/career-tablet@2x.webp 2x" width="324" height="350">
+                    <source type="image/webp" srcset="./img/news/career-desktop@1x.webp, ./img/news/career-desktop@2x.webp 2x" width="286" height="400">
+                    <source media="(max-width: 1199px)" srcset="./img/news/career-tablet@1x.jpg, ./img/news/career-tablet@2x.jpg 2x" width="324" height="350">
+                    <img src="./img/news/career-desktop@1x.jpg" srcset="./img/news/career-desktop@2x.jpg 2x" width="286" height="400" alt="Девушка держит книгу и смотрит на парня в библиотеке.">
+                  </picture>
+                  <div class="news__content">
+                    <time datetime="2023-03-10">10/03/2023</time>
+                    <h3>Построй свою карьеру</h3>
+                    <div class="news__body-text">
+                      <p>Ведущие компании готовы трудоустроить выпускников стажировки</p>
+                      <button class="news__button button-arrow">
+                        <svg width="10" height="10" aria-hidden="true" focusable="false">
+                          <use href="./img/sprite.svg#arrow"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </li>
+                <li class="news__item news__item--bottom swiper-slide">
+                  <picture>
+                    <source type="image/webp" media="(max-width: 1199px)" srcset="./img/news/journey-tablet@1x.webp, ./img/news/journey-tablet@2x.webp 2x" width="324" height="350">
+                    <source type="image/webp" srcset="./img/news/journey-desktop@1x.webp, ./img/news/journey-desktop@2x.webp 2x" width="286" height="400">
+                    <source media="(max-width: 1199px)" srcset="./img/news/journey-tablet@1x.jpg, ./img/news/journey-tablet@2x.jpg 2x" width="324" height="350">
+                    <img src="./img/news/journey-desktop@1x.jpg" srcset="./img/news/journey-desktop@2x.jpg 2x" width="286" height="400" alt="Девушка держит книгу и смотрит на парня в библиотеке.">
+                  </picture>
+                  <div class="news__content">
+                    <time datetime="2023-03-20">20/03/2023</time>
+                    <h3>Путешествуем по&nbsp;Израилю</h3>
+                    <div class="news__body-text">
+                      <p>Какие места посещают наши студенты весной</p>
+                      <button class="news__button button-arrow">
+                        <svg width="10" height="10" aria-hidden="true" focusable="false">
+                          <use href="./img/sprite.svg#arrow"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="news__controls">
+              <button class="news__prev arrow" type="button">
+                <svg width="8" height="8" aria-hidden="true" focusable="false">
+                  <use href="./img/sprite.svg#arrow"></use>
+                </svg>
+              </button>
+              <div class="news__pagination"></div>
+              <button class="news__next arrow arrow--next" type="button">
+                <svg width="8" height="8" aria-hidden="true" focusable="false">
+                  <use href="./img/sprite.svg#arrow"></use>
+                </svg>
+              </button>
+            </div>
           </div>
         </section>
         <section class="faq">

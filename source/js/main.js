@@ -8,6 +8,8 @@ import {addHeroSlider} from './modules/hero/slider';
 import {addProgramsSlider} from './modules/programs/slider';
 import {addContactsMap} from './modules/contacts/map';
 import {addReviewsSlider} from './modules/reviews/slider';
+import {addTabHandler} from './modules/news/tabs';
+import {addNewsSlider} from './modules/news/slider';
 
 // ---------------------------------
 
@@ -27,6 +29,8 @@ window.addEventListener('DOMContentLoaded', () => {
   addProgramsSlider();
   addContactsMap();
   addReviewsSlider();
+  addTabHandler();
+  addNewsSlider();
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
