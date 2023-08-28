@@ -17,13 +17,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 20px;
-  padding-bottom: 20px;
-
-  @include tablet {
-    padding-top: 30px;
-    padding-bottom: 30px;
-  }
+  padding-top: 30px;
+  padding-bottom: 30px;
 
   @include mobile {
     padding-top: 20px;
@@ -54,7 +49,7 @@
 
 .header__nav {
   position: absolute;
-  top: 78px;
+  top: 88px;
   right: 5px;
 
   @include tablet {
