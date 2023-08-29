@@ -38,8 +38,27 @@
     }
   }
 
+  &--secondary {
+    @include hover-focus-within {
+      .custom-select__button {
+        border-color: $color-charcoal;
+      }
+    }
+
+    &:has(.custom-select__button:disabled) {
+      .custom-select__button {
+        background-color: rgba($color-mischka, 0.2);
+        border-color: rgba($color-charcoal, 0.5);
+      }
+    }
+  }
+
   @include mobile {
     gap: 11px 0;
+
+    &--secondary {
+      gap: 8px 0;
+    }
   }
 }
 
@@ -50,12 +69,20 @@
   opacity: 0.8;
   transition: opacity $trans-default;
 
+  &--secondary {
+    margin: 0;
+  }
+
   @include tablet {
     margin: 0;
   }
 
   @include mobile {
     font-size: 12px;
+
+    &--secondary {
+      font-size: 14px;
+    }
   }
 }
 
@@ -67,12 +94,27 @@
   padding: 14px 20px 15px;
   font-size: 14px;
   line-height: 14px;
+  color: $color-default-white;
   background-color: $color-transparent;
   border: 1px solid rgba($color-default-white, 0.3);
   border-radius: 8px;
   outline: none;
   cursor: pointer;
   transition: border $trans-default;
+
+  &--secondary {
+    color: $color-charcoal;
+    border-color: rgba($color-charcoal, 0.3);
+
+    @include hover-focus {
+      border-color: $color-charcoal;
+    }
+
+    @include disabled {
+      background-color: rgba($color-mischka, 0.2);
+      border-color: rgba($color-charcoal, 0.5);
+    }
+  }
 
   @include hover-focus {
     border: 1px solid $color-default-white;
@@ -83,6 +125,13 @@
     opacity: 0.4;
     pointer-events: none;
   }
+
+  @include mobile {
+    &--secondary {
+      padding: 1px 20px 1px;
+      min-height: 44px;
+    }
+  }
 }
 
 .custom-select__text {
@@ -92,7 +141,6 @@
   font-size: 14px;
   line-height: 14px;
   text-align: left;
-  color: $color-default-white;
   white-space: nowrap;
   text-overflow: ellipsis;
   opacity: 0;
@@ -107,6 +155,10 @@
   background-color: $color-default-white;
   transition: transform $trans-default;
   clip-path: polygon(100% 0, 100% 20%, 50% 100%, 0 20%, 0 0, 50% 80%);
+
+  &--secondary {
+    background-color: $color-charcoal;
+  }
 }
 
 .custom-select__list {
@@ -119,8 +171,8 @@
   padding: 0;
   overflow-y: auto;
   list-style: none;
-  color: $color-default-black;
-  background-color: #ffffff;
+  color: $color-charcoal;
+  background-color: $color-default-white;
   border: 1px solid $color-default-white;
   border-radius: 8px;
   transform: translateY(100%);
@@ -129,6 +181,10 @@
   transition:
     visibility $trans-default,
     opacity $trans-default;
+
+  &--secondary {
+    border-color: $color-charcoal;
+  }
 }
 
 .custom-select__item {

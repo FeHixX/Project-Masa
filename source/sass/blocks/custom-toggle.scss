@@ -24,7 +24,6 @@
 
     &:checked + .custom-toggle__icon {
       background-color: $color-default-white;
-      opacity: 1;
 
       &::before {
         opacity: 1;
@@ -41,18 +40,79 @@
           }
         }
       }
+
+      @include disabled {
+        & + .custom-toggle__icon {
+          background-color: $color-mischka;
+          border-color: $color-mischka;
+
+          &::before {
+            background-image: url('data:image/svg+xml,\<svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">\<path d="M1 3.5L3.94737 7L9 1" stroke="%23ffffff" stroke-linecap="round" stroke-linejoin="round"/>\</svg>');
+          }
+        }
+      }
     }
 
     @include hover-focus {
       & + .custom-toggle__icon {
-        opacity: 1;
+        border-color: $color-default-white;
       }
     }
 
     @include disabled {
       & + .custom-toggle__icon {
         background-color: rgba($color-default-white, 0.6);
+        border-color: $color-default-white;
         pointer-events: none;
+      }
+    }
+  }
+
+  &--secondary {
+    input {
+      &:checked + .custom-toggle__icon {
+        background-color: $color-cerulean-blue;
+        border-color: $color-cerulean-blue;
+
+        &::before {
+          background-image: url('data:image/svg+xml,\<svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">\<path d="M1 3.5L3.94737 7L9 1" stroke="%23ffffff" stroke-linecap="round" stroke-linejoin="round"/>\</svg>');
+        }
+      }
+
+      &:checked {
+        @include hover-focus {
+          & + .custom-toggle__icon {
+            background-color: $color-transparent;
+
+            &::before {
+              background-image: url('data:image/svg+xml,\<svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">\<path d="M1 3.5L3.94737 7L9 1" stroke="%23484848" stroke-linecap="round" stroke-linejoin="round"/>\</svg>');
+            }
+          }
+        }
+
+        @include disabled {
+          & + .custom-toggle__icon {
+            background-color: $color-mischka;
+            border-color: $color-mischka;
+
+            &::before {
+              background-image: url('data:image/svg+xml,\<svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">\<path d="M1 3.5L3.94737 7L9 1" stroke="%23ffffff" stroke-linecap="round" stroke-linejoin="round"/>\</svg>');
+            }
+          }
+        }
+      }
+
+      @include hover-focus {
+        & + .custom-toggle__icon {
+          border-color: $color-charcoal;
+        }
+      }
+
+      @include disabled {
+        & + .custom-toggle__icon {
+          background-color: rgba($color-charcoal, 0.6);
+          border-color: $color-charcoal;
+        }
       }
     }
   }
@@ -60,6 +120,10 @@
   @include mobile {
     margin: 0;
     line-height: 14px;
+
+    &--secondary {
+      margin: 1px 0 0;
+    }
   }
 }
 
@@ -70,9 +134,8 @@
   width: 20px;
   height: 20px;
   transform: translateY(-50%);
-  border: 1px solid $color-default-white;
+  border: 1px solid rgba($color-default-white, 0.7);
   border-radius: 2px;
-  opacity: 0.7;
   transition: all $trans-default;
 
   &::before {
@@ -88,6 +151,10 @@
     transform: translate(-50%, -50%);
     opacity: 0;
     transition: all $trans-default;
+  }
+
+  &--secondary {
+    border-color: rgba($color-charcoal, 0.7);
   }
 
   @include mobile {

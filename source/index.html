@@ -872,60 +872,48 @@
           <p class="modal__text">Оставьте ваши контакты, если у&nbsp;вас остались вопросы&nbsp;&mdash; мы&nbsp;на&nbsp;них ответим!</p>
           <div class="modal__form" data-form-validate="data-form-validate" data-callback="base">
             <form action="https://echo.htmlacademy.ru/" method="post" autocomplete="off" novalidate>
-
-              <div class="custom-input" data-validate-type="text" data-limitation="name" data-required>
+              <div class="custom-input custom-input--secondary" data-validate-type="text" data-limitation="name" data-required>
                 <label>
-                  <span class="custom-input__label">Имя</span>
-                  <input type="text" name="user-name-1">
+                  <span class="custom-input__label custom-input__label--secondary">Имя</span>
+                  <input type="text" name="name" pattern="^[а-яА-ЯёЁa-zA-Z\-]+$" required>
                 </label>
               </div>
-
-              <div class="custom-input" data-validate-type="phone" data-on-input-validate="" data-required data-phone-length="18">
-                <label><span class="custom-input__label">Телефон</span>
-                  <input type="tel" name="user-phone" class="">
+              <div class="custom-input custom-input--secondary" data-validate-type="phone" data-required data-phone-length="18">
+                <label>
+                  <span class="custom-input__label custom-input__label--secondary">Телефон</span>
+                  <input type="tel" name="phone" pattern="^(\+)|[\d\s]+$" minlength="11" required>
                 </label>
               </div>
-
-              <div class="custom-select" data-select="" data-validate-type="select" data-name="some-name" data-id="id-example-2" data-required>
-                <span class="custom-select__label">Выберите город</span>
-                <button class="custom-select__button" type="button" aria-label="Выберите одну из опций">
+              <div class="custom-select custom-select--secondary" data-select data-validate-type="select" data-name="city" data-id="city" data-required>
+                <span class="custom-select__label custom-select__label--secondary">Выберите город</span>
+                <button class="custom-select__button custom-select__button--secondary" type="button" aria-label="Выберите одну из опций">
                   <span class="custom-select__text"></span>
-                  <span class="custom-select__icon"></span>
+                  <span class="custom-select__icon custom-select__icon--secondary"></span>
                 </button>
-                <ul class="custom-select__list" role="listbox">
-                  <li class="custom-select__item" tabindex="0" data-select-value="id-1" aria-selected="false" role="option">Санкт-Петербург</li>
+                <ul class="custom-select__list custom-select__list--secondary" role="listbox">
+                  <li class="custom-select__item" tabindex="0" data-select-value="id-1" aria-selected="false" role="option">Москва</li>
                   <li class="custom-select__item" tabindex="0" data-select-value="id-2" aria-selected="false" role="option">Санкт-Петербург</li>
-                  <li class="custom-select__item" tabindex="0" data-select-value="id-3" aria-selected="false" role="option">Санкт-Петербург</li>
-                  <li class="custom-select__item" tabindex="0" data-select-value="id-4" aria-selected="false" role="option">Санкт-Петербург</li>
+                  <li class="custom-select__item" tabindex="0" data-select-value="id-3" aria-selected="false" role="option">Екатеринбург</li>
+                  <li class="custom-select__item" tabindex="0" data-select-value="id-4" aria-selected="false" role="option">Новосибирск</li>
                 </ul>
-                <select id="id-example-2" name="some-name" tabindex="-1" aria-hidden="true">
-                  <option value="">&nbsp;</option>
-                  <option value="id-1">Санкт-Петербург</option>
-                  <option value="id-2">Санкт-Петербург</option>
-                  <option value="id-3">Санкт-Петербург</option>
-                  <option value="id-4">Санкт-Петербург</option>
-                </select>
               </div>
-
-              <div class="custom-toggle custom-toggle--checkbox" data-validate-type="checkbox" data-required>
+              <div class="custom-toggle custom-toggle--secondary custom-toggle--checkbox" data-validate-type="checkbox" data-required>
                 <label>
-                  <input type="checkbox" value="user-agreement-1" name="user-agreement">
-                  <span class="custom-toggle__icon"></span>
+                  <input type="checkbox" value="user-agreement" name="user-agreement">
+                  <span class="custom-toggle__icon custom-toggle__icon--secondary"></span>
                   <span class="custom-toggle__label">Я&nbsp;согласен на&nbsp;обработку моих персональных данных</span>
                 </label>
               </div>
-
               <button class="modal__button button" type="submit">
                 Отправить
                 <svg width="10" height="10" aria-hidden="true" focusable="false">
                   <use href="./img/sprite.svg#arrow"></use>
                 </svg>
               </button>
-
             </form>
           </div>
           <button class="modal__close-btn" type="button" aria-label="Закрыть попап" data-close-modal>
-            <svg width="18" height="18">
+            <svg width="22" height="22">
               <use href="./img/sprite.svg#cross"></use>
             </svg>
           </button>
