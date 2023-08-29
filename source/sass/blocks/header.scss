@@ -20,6 +20,11 @@
   padding-top: 30px;
   padding-bottom: 30px;
 
+  @include tablet {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
   @include mobile {
     padding-top: 20px;
     padding-bottom: 20px;
