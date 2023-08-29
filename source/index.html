@@ -746,7 +746,62 @@
         </section>
         <section class="feedback">
           <div class="feedback__container container">
-            <h2 class="feedback__title title">Напишите нам</h2>
+            <div class="feedback__form" data-form-validate="data-form-validate" data-callback="base">
+              <h2 class="feedback__title title">Напишите нам</h2>
+              <p class="feedback__text">Оставьте ваши контакты, если у&nbsp;вас остались вопросы&nbsp;&mdash; мы&nbsp;на&nbsp;них ответим!</p>
+              <form action="https://echo.htmlacademy.ru/" method="post" autocomplete="off" novalidate>
+                <div class="custom-input" data-validate-type="text" data-limitation="name" data-required>
+                  <label>
+                    <span class="custom-input__label">Имя</span>
+                    <input type="text" name="name" pattern="^[а-яА-ЯёЁa-zA-Z\-]+$" required>
+                  </label>
+                </div>
+                <div class="custom-input" data-validate-type="phone" data-required data-phone-length="18">
+                  <label>
+                    <span class="custom-input__label">Телефон</span>
+                    <input type="tel" name="phone" pattern="^(\+)|[\d\s]+$" minlength="11" required>
+                  </label>
+                </div>
+                <div class="custom-textarea" data-validate-type="text" data-limitation="leters" data-required>
+                  <label>
+                    <span class="custom-textarea__label">Ваше сообщение</span>
+                    <textarea name="message" rows="5" cols="25"></textarea>
+                  </label>
+                </div>
+                <div class="custom-select" data-select data-validate-type="select" data-name="city" data-id="city" data-required>
+                  <span class="custom-select__label">Выберите город</span>
+                  <button class="custom-select__button" type="button" aria-label="Выберите одну из опций">
+                    <span class="custom-select__text"></span>
+                    <span class="custom-select__icon"></span>
+                  </button>
+                  <ul class="custom-select__list" role="listbox">
+                    <li class="custom-select__item" tabindex="0" data-select-value="id-1" aria-selected="false" role="option">Москва</li>
+                    <li class="custom-select__item" tabindex="0" data-select-value="id-2" aria-selected="false" role="option">Санкт-Петербург</li>
+                    <li class="custom-select__item" tabindex="0" data-select-value="id-3" aria-selected="false" role="option">Екатеринбург</li>
+                    <li class="custom-select__item" tabindex="0" data-select-value="id-4" aria-selected="false" role="option">Новосибирск</li>
+                  </ul>
+                </div>
+                <div class="custom-toggle custom-toggle--checkbox" data-validate-type="checkbox" data-required>
+                  <label>
+                    <input type="checkbox" value="user-agreement" name="user-agreement">
+                    <span class="custom-toggle__icon"></span>
+                    <span class="custom-toggle__label">Я&nbsp;согласен на&nbsp;обработку моих персональных данных</span>
+                  </label>
+                </div>
+                <button class="feedback__button button button--secondary" type="submit">
+                  Отправить
+                  <svg width="10" height="10" aria-hidden="true" focusable="false">
+                    <use href="./img/sprite.svg#arrow"></use>
+                  </svg>
+                </button>
+              </form>
+            </div>
+            <picture>
+              <source type="image/webp" media="(max-width: 1199px)" srcset="./img/feedback/feedback-tablet@1x.webp, ./img/feedback/feedback-tablet@2x.webp 2x" width="678" height="780">
+              <source type="image/webp" srcset="./img/feedback/feedback-desktop@1x.webp, ./img/feedback/feedback-desktop@2x.webp 2x" width="1240" height="803">
+              <source media="(max-width: 1199px)" srcset="./img/feedback/feedback-tablet@1x.png, ./img/feedback/feedback-tablet@2x.png 2x" width="678" height="780">
+              <img src="./img/feedback/feedback-desktop@1x.jpg" srcset="./img/feedback/feedback-desktop@2x.png 2x" width="1240" height="803" alt="Фон: здание на пляже.">
+            </picture>
           </div>
         </section>
       </main>

@@ -1,0 +1,107 @@
+.custom-toggle {
+  margin: 2px 0 0;
+  font-size: 12px;
+  line-height: 12px;
+
+  label {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 20px;
+    cursor: pointer;
+
+    &:has(input:disabled) {
+      pointer-events: none;
+    }
+  }
+
+  input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    clip: rect(0 0 0 0);
+
+    &:checked + .custom-toggle__icon {
+      background-color: $color-default-white;
+      opacity: 1;
+
+      &::before {
+        opacity: 1;
+      }
+    }
+
+    &:checked {
+      @include hover-focus {
+        & + .custom-toggle__icon {
+          background-color: $color-transparent;
+
+          &::before {
+            background-image: url('data:image/svg+xml,\<svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">\<path d="M1 3.5L3.94737 7L9 1" stroke="%23ffffff" stroke-linecap="round" stroke-linejoin="round"/>\</svg>');
+          }
+        }
+      }
+    }
+
+    @include hover-focus {
+      & + .custom-toggle__icon {
+        opacity: 1;
+      }
+    }
+
+    @include disabled {
+      & + .custom-toggle__icon {
+        background-color: rgba($color-default-white, 0.6);
+        pointer-events: none;
+      }
+    }
+  }
+
+  @include mobile {
+    margin: 0;
+    line-height: 14px;
+  }
+}
+
+.custom-toggle--checkbox .custom-toggle__icon {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  transform: translateY(-50%);
+  border: 1px solid $color-default-white;
+  border-radius: 2px;
+  opacity: 0.7;
+  transition: all $trans-default;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 8px;
+    background-color: $color-transparent;
+    background-image: url('data:image/svg+xml,\<svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">\<path d="M1 3.5L3.94737 7L9 1" stroke="%23316dc2" stroke-linecap="round" stroke-linejoin="round"/>\</svg>');
+    border-radius: 2px;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all $trans-default;
+  }
+
+  @include mobile {
+    top: calc(50% - 1px);
+  }
+}
+
+.custom-toggle__label {
+  padding-left: 30px;
+}
+
+.custom-toggle.is-invalid {
+  .custom-toggle__icon {
+    background: rgba($color-wild-watermelon, 0.2);
+    border: 1px solid $color-wild-watermelon;
+  }
+}
