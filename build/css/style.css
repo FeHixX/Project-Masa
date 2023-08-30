@@ -2779,13 +2779,12 @@ button,
 .nav__link {
   font-weight: 400;
   line-height: 16px;
-  color: #ffffff;
+  color: rgba(255, 255, 255, 0.7);
   text-transform: uppercase;
   letter-spacing: 0.32px;
   outline: none;
-  opacity: 0.7;
-  -webkit-transition: opacity 0.3s ease;
-  transition: opacity 0.3s ease;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
 }
 
 .nav__link--button {
@@ -2800,15 +2799,15 @@ button,
 }
 
 .nav__link--current {
-  opacity: 1;
+  color: #ffffff;
 }
 
 .nav__link:hover:not([disabled]) {
-  opacity: 1;
+  color: #ffffff;
 }
 
 .nav__link:focus-visible:not([disabled]) {
-  opacity: 1;
+  color: #ffffff;
 }
 
 .nav__subnav-list {
@@ -2833,16 +2832,17 @@ button,
 }
 
 .nav__subnav-list .nav__link {
+  color: rgba(255, 255, 255, 0.6);
   text-transform: none;
   letter-spacing: normal;
 }
 
 .nav__subnav-list .nav__link--current {
-  opacity: 0.9;
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .nav__item.is-active .nav__link--button {
-  opacity: 1;
+  color: #ffffff;
 }
 
 .nav__item.is-active .nav__subnav-list {
@@ -5095,7 +5095,7 @@ button,
   align-items: center;
   width: 100%;
   min-height: 100%;
-  padding: 45px;
+  padding: 60px 45px;
 }
 
 .modal__overlay {
@@ -6467,7 +6467,7 @@ button,
   }
 
   .modal__wrapper {
-    padding: 15px;
+    padding: 60px 15px;
   }
 
   .modal__content {
