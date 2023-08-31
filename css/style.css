@@ -2810,6 +2810,13 @@ button,
   color: #ffffff;
 }
 
+.nav__icon-menu {
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
 .nav__subnav-list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2850,9 +2857,9 @@ button,
 }
 
 .nav__item.is-active .nav__icon-menu {
-  -webkit-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  transform: rotate(180deg);
+  -webkit-transform: scale(-1);
+  -ms-transform: scale(-1);
+  transform: scale(-1);
 }
 
 :root {
@@ -3717,52 +3724,85 @@ button,
 }
 
 .faq__item {
-  padding: 39px;
   border: 1px solid #316dc2;
   border-radius: 16px;
   -webkit-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
+  cursor: pointer;
 }
 
-.faq__item:hover:not([disabled]):not(.is-active) {
-  background-color: #ffffff;
-}
-
-.faq__item:hover:not([disabled]):not(.is-active) .faq__button:not(:active) {
-  background-color: #ffffff;
-  border-color: #316dc2;
-}
-
-.faq__item:hover:not([disabled]):not(.is-active) .faq__button:not(:active)::before,
-.faq__item:hover:not([disabled]):not(.is-active) .faq__button:not(:active)::after {
-  background-color: #316dc2;
-}
-
-.faq__item:focus-within:not([disabled]):not(.is-active) {
-  background-color: #ffffff;
-}
-
-.faq__item:focus-within:not([disabled]):not(.is-active) .faq__button:not(:active) {
-  background-color: #ffffff;
-  border-color: #316dc2;
-}
-
-.faq__item:focus-within:not([disabled]):not(.is-active) .faq__button:not(:active)::before,
-.faq__item:focus-within:not([disabled]):not(.is-active) .faq__button:not(:active)::after {
-  background-color: #316dc2;
-}
-
-.faq__item:has(.faq__button:active) h3 {
+.faq__item:not(.is-active):has(.faq__button:active) h3 {
   color: #275699;
+}
+
+.faq__item:not(.is-active):hover:not([disabled]) {
+  background-color: #ffffff;
+}
+
+.faq__item:not(.is-active):hover:not([disabled]) .faq__button {
+  background-color: #ffffff;
+  border-color: #316dc2;
+}
+
+.faq__item:not(.is-active):hover:not([disabled]) .faq__button::before,
+.faq__item:not(.is-active):hover:not([disabled]) .faq__button::after {
+  background-color: #316dc2;
+}
+
+.faq__item:not(.is-active):hover:not([disabled]) .faq__button:active:not([disabled]) {
+  background-color: #275699;
+  border-color: #275699;
+}
+
+.faq__item:not(.is-active):hover:not([disabled]) .faq__button:active:not([disabled])::before,
+.faq__item:not(.is-active):hover:not([disabled]) .faq__button:active:not([disabled])::after {
+  background-color: #ffffff;
+}
+
+.faq__item:not(.is-active):focus-within:not([disabled]) {
+  background-color: #ffffff;
+}
+
+.faq__item:not(.is-active):focus-within:not([disabled]) .faq__button {
+  background-color: #ffffff;
+  border-color: #316dc2;
+}
+
+.faq__item:not(.is-active):focus-within:not([disabled]) .faq__button::before,
+.faq__item:not(.is-active):focus-within:not([disabled]) .faq__button::after {
+  background-color: #316dc2;
+}
+
+.faq__item:not(.is-active):focus-within:not([disabled]) .faq__button:active:not([disabled]) {
+  background-color: #275699;
+  border-color: #275699;
+}
+
+.faq__item:not(.is-active):focus-within:not([disabled]) .faq__button:active:not([disabled])::before,
+.faq__item:not(.is-active):focus-within:not([disabled]) .faq__button:active:not([disabled])::after {
+  background-color: #ffffff;
+}
+
+.faq__item:not(.is-active):active:not([disabled]) h3 {
+  color: #275699;
+}
+
+.faq__item:not(.is-active):active:not([disabled]) .faq__button {
+  background-color: #275699;
+  border-color: #275699;
+}
+
+.faq__item:not(.is-active):active:not([disabled]) .faq__button::before,
+.faq__item:not(.is-active):active:not([disabled]) .faq__button::after {
+  background-color: #ffffff;
+}
+
+.faq__item.is-active {
+  background-color: #316dc2;
 }
 
 .faq__item.is-active:has(.faq__button:active) {
   background-color: #275699;
-}
-
-.faq__item.is-active {
-  padding-bottom: 32px;
-  background-color: #316dc2;
 }
 
 .faq__item.is-active:hover:not([disabled]) .faq__button {
@@ -3781,6 +3821,27 @@ button,
 
 .faq__item.is-active:focus-within:not([disabled]) .faq__button::before {
   background-color: #ffffff;
+}
+
+.faq__item.is-active:active:not([disabled]) {
+  background-color: #275699;
+}
+
+.faq__item.is-active:active:not([disabled]) .faq__button {
+  background-color: #ffffff;
+  border-color: #ffffff;
+}
+
+.faq__item.is-active:active:not([disabled]) .faq__button::before {
+  background-color: #275699;
+}
+
+.faq__content {
+  padding: 39px;
+}
+
+.faq__item.is-active .faq__content {
+  padding-bottom: 32px;
 }
 
 .faq__body-heading {
@@ -3824,6 +3885,31 @@ button,
   transition: background-color 0.3s ease;
 }
 
+.faq__button::before {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 1px;
+  margin: auto;
+  background-color: #ffffff;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+  inset: 0;
+}
+
+.faq__button::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 18px;
+  margin: auto;
+  background-color: #ffffff;
+  opacity: 1;
+  -webkit-transition: background-color 0.3s ease, opacity 0.3s ease;
+  transition: background-color 0.3s ease, opacity 0.3s ease;
+  inset: 0;
+}
+
 .faq__button:hover:not([disabled]) {
   background-color: rgba(255, 255, 255, 0);
 }
@@ -3861,31 +3947,6 @@ button,
 .faq__button[disabled]::before,
 .faq__button[disabled]::after {
   background-color: #ffffff;
-}
-
-.faq__button::before {
-  content: "";
-  position: absolute;
-  width: 18px;
-  height: 1px;
-  margin: auto;
-  background-color: #ffffff;
-  -webkit-transition: background-color 0.3s ease;
-  transition: background-color 0.3s ease;
-  inset: 0;
-}
-
-.faq__button::after {
-  content: "";
-  position: absolute;
-  width: 1px;
-  height: 18px;
-  margin: auto;
-  background-color: #ffffff;
-  opacity: 1;
-  -webkit-transition: background-color 0.3s ease, opacity 0.3s ease;
-  transition: background-color 0.3s ease, opacity 0.3s ease;
-  inset: 0;
 }
 
 .faq__item.is-active .faq__button {
@@ -4314,50 +4375,6 @@ button,
   gap: 10px 0;
 }
 
-.custom-input label:hover:not([disabled]):not(:has(input:disabled, textarea:disabled)) .custom-input__label,
-.custom-input label:hover:not([disabled]):not(:has(input:disabled, textarea:disabled)) .custom-textarea__label,
-.custom-textarea label:hover:not([disabled]):not(:has(input:disabled, textarea:disabled)) .custom-input__label,
-.custom-textarea label:hover:not([disabled]):not(:has(input:disabled, textarea:disabled)) .custom-textarea__label {
-  opacity: 1;
-}
-
-.custom-input label:hover:not([disabled]):not(:has(input:disabled, textarea:disabled)) input,
-.custom-input label:hover:not([disabled]):not(:has(input:disabled, textarea:disabled)) textarea,
-.custom-textarea label:hover:not([disabled]):not(:has(input:disabled, textarea:disabled)) input,
-.custom-textarea label:hover:not([disabled]):not(:has(input:disabled, textarea:disabled)) textarea {
-  border: 1px solid #ffffff;
-}
-
-.custom-input label:focus-within:not([disabled]) .custom-input__label,
-.custom-input label:focus-within:not([disabled]) .custom-textarea__label,
-.custom-textarea label:focus-within:not([disabled]) .custom-input__label,
-.custom-textarea label:focus-within:not([disabled]) .custom-textarea__label {
-  opacity: 1;
-}
-
-.custom-input label:focus-within:not([disabled]) input,
-.custom-input label:focus-within:not([disabled]) textarea,
-.custom-textarea label:focus-within:not([disabled]) input,
-.custom-textarea label:focus-within:not([disabled]) textarea {
-  border: 1px solid #ffffff;
-}
-
-.custom-input label:has(input:disabled, textarea:disabled) .custom-input__label,
-.custom-input label:has(input:disabled, textarea:disabled) .custom-textarea__label,
-.custom-textarea label:has(input:disabled, textarea:disabled) .custom-input__label,
-.custom-textarea label:has(input:disabled, textarea:disabled) .custom-textarea__label {
-  opacity: 0.8;
-}
-
-.custom-input label:has(input:disabled, textarea:disabled) input,
-.custom-input label:has(input:disabled, textarea:disabled) textarea,
-.custom-textarea label:has(input:disabled, textarea:disabled) input,
-.custom-textarea label:has(input:disabled, textarea:disabled) textarea {
-  background-color: rgba(255, 255, 255, 0.2);
-  border-color: rgba(255, 255, 255, 0.4);
-  pointer-events: none;
-}
-
 .custom-input input,
 .custom-input textarea,
 .custom-textarea input,
@@ -4408,6 +4425,38 @@ button,
 .custom-textarea--secondary textarea {
   color: inherit;
   border-color: rgba(72, 72, 72, 0.3);
+}
+
+label:hover:not([disabled]):not(:has(input:disabled, textarea:disabled)) .custom-input__label,
+label:hover:not([disabled]):not(:has(input:disabled, textarea:disabled)) .custom-textarea__label {
+  opacity: 1;
+}
+
+label:hover:not([disabled]):not(:has(input:disabled, textarea:disabled)) input,
+label:hover:not([disabled]):not(:has(input:disabled, textarea:disabled)) textarea {
+  border: 1px solid #ffffff;
+}
+
+label:focus-within:not([disabled]) .custom-input__label,
+label:focus-within:not([disabled]) .custom-textarea__label {
+  opacity: 1;
+}
+
+label:focus-within:not([disabled]) input,
+label:focus-within:not([disabled]) textarea {
+  border: 1px solid #ffffff;
+}
+
+label:has(input:disabled, textarea:disabled) .custom-input__label,
+label:has(input:disabled, textarea:disabled) .custom-textarea__label {
+  opacity: 0.8;
+}
+
+label:has(input:disabled, textarea:disabled) input,
+label:has(input:disabled, textarea:disabled) textarea {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.4);
+  pointer-events: none;
 }
 
 .custom-input__label,
@@ -4554,7 +4603,7 @@ button,
 
 .custom-select__button[disabled] {
   background-color: rgba(255, 255, 255, 0.2);
-  opacity: 0.4;
+  border-color: rgba(255, 255, 255, 0.4);
   pointer-events: none;
 }
 
@@ -5548,11 +5597,11 @@ button,
     width: 100%;
   }
 
-  .faq__item {
+  .faq__content {
     padding: 29px;
   }
 
-  .faq__item.is-active {
+  .faq__item.is-active .faq__content {
     padding-bottom: 25px;
   }
 
@@ -6168,11 +6217,14 @@ button,
   }
 
   .faq__item {
-    padding: 19px 14px;
     border-radius: 14px;
   }
 
-  .faq__item.is-active {
+  .faq__content {
+    padding: 19px 14px;
+  }
+
+  .faq__item.is-active .faq__content {
     padding-bottom: 14px;
   }
 
