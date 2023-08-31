@@ -4375,6 +4375,50 @@ button,
   gap: 10px 0;
 }
 
+.custom-input label:hover:not([disabled]):not(:has(input:disabled, textarea:disabled)) .custom-input__label,
+.custom-input label:hover:not([disabled]):not(:has(input:disabled, textarea:disabled)) .custom-textarea__label,
+.custom-textarea label:hover:not([disabled]):not(:has(input:disabled, textarea:disabled)) .custom-input__label,
+.custom-textarea label:hover:not([disabled]):not(:has(input:disabled, textarea:disabled)) .custom-textarea__label {
+  opacity: 1;
+}
+
+.custom-input label:hover:not([disabled]):not(:has(input:disabled, textarea:disabled)) input,
+.custom-input label:hover:not([disabled]):not(:has(input:disabled, textarea:disabled)) textarea,
+.custom-textarea label:hover:not([disabled]):not(:has(input:disabled, textarea:disabled)) input,
+.custom-textarea label:hover:not([disabled]):not(:has(input:disabled, textarea:disabled)) textarea {
+  border: 1px solid #ffffff;
+}
+
+.custom-input label:focus-within:not([disabled]) .custom-input__label,
+.custom-input label:focus-within:not([disabled]) .custom-textarea__label,
+.custom-textarea label:focus-within:not([disabled]) .custom-input__label,
+.custom-textarea label:focus-within:not([disabled]) .custom-textarea__label {
+  opacity: 1;
+}
+
+.custom-input label:focus-within:not([disabled]) input,
+.custom-input label:focus-within:not([disabled]) textarea,
+.custom-textarea label:focus-within:not([disabled]) input,
+.custom-textarea label:focus-within:not([disabled]) textarea {
+  border: 1px solid #ffffff;
+}
+
+.custom-input label:has(input:disabled, textarea:disabled) .custom-input__label,
+.custom-input label:has(input:disabled, textarea:disabled) .custom-textarea__label,
+.custom-textarea label:has(input:disabled, textarea:disabled) .custom-input__label,
+.custom-textarea label:has(input:disabled, textarea:disabled) .custom-textarea__label {
+  opacity: 0.8;
+}
+
+.custom-input label:has(input:disabled, textarea:disabled) input,
+.custom-input label:has(input:disabled, textarea:disabled) textarea,
+.custom-textarea label:has(input:disabled, textarea:disabled) input,
+.custom-textarea label:has(input:disabled, textarea:disabled) textarea {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.4);
+  pointer-events: none;
+}
+
 .custom-input input,
 .custom-input textarea,
 .custom-textarea input,
@@ -4425,38 +4469,6 @@ button,
 .custom-textarea--secondary textarea {
   color: inherit;
   border-color: rgba(72, 72, 72, 0.3);
-}
-
-label:hover:not([disabled]):not(:has(input:disabled, textarea:disabled)) .custom-input__label,
-label:hover:not([disabled]):not(:has(input:disabled, textarea:disabled)) .custom-textarea__label {
-  opacity: 1;
-}
-
-label:hover:not([disabled]):not(:has(input:disabled, textarea:disabled)) input,
-label:hover:not([disabled]):not(:has(input:disabled, textarea:disabled)) textarea {
-  border: 1px solid #ffffff;
-}
-
-label:focus-within:not([disabled]) .custom-input__label,
-label:focus-within:not([disabled]) .custom-textarea__label {
-  opacity: 1;
-}
-
-label:focus-within:not([disabled]) input,
-label:focus-within:not([disabled]) textarea {
-  border: 1px solid #ffffff;
-}
-
-label:has(input:disabled, textarea:disabled) .custom-input__label,
-label:has(input:disabled, textarea:disabled) .custom-textarea__label {
-  opacity: 0.8;
-}
-
-label:has(input:disabled, textarea:disabled) input,
-label:has(input:disabled, textarea:disabled) textarea {
-  background-color: rgba(255, 255, 255, 0.2);
-  border-color: rgba(255, 255, 255, 0.4);
-  pointer-events: none;
 }
 
 .custom-input__label,
