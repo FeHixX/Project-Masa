@@ -166,9 +166,7 @@
   padding-left: 30px;
 }
 
-.custom-toggle.is-invalid {
-  .custom-toggle__icon {
-    background: rgba($color-wild-watermelon, 0.2);
-    border: 1px solid $color-wild-watermelon;
-  }
+.custom-toggle.is-invalid .custom-toggle__icon {
+  background: rgba($color-wild-watermelon, 0.2);
+  border: 1px solid $color-wild-watermelon;
 }

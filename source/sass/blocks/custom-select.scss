@@ -122,7 +122,7 @@
 
   @include disabled {
     background-color: rgba($color-default-white, 0.2);
-    opacity: 0.4;
+    border-color: rgba($color-default-white, 0.4);
     pointer-events: none;
   }
 

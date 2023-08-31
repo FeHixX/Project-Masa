@@ -5,46 +5,6 @@
     flex-direction: column;
     width: 100%;
     gap: 10px 0;
-
-    @include hover {
-      &:not(:has(input:disabled, textarea:disabled)) {
-        .custom-input__label,
-        .custom-textarea__label {
-          opacity: 1;
-        }
-
-        input,
-        textarea {
-          border: 1px solid $color-default-white;
-        }
-      }
-    }
-
-    @include focus-within {
-      .custom-input__label,
-      .custom-textarea__label {
-        opacity: 1;
-      }
-
-      input,
-      textarea {
-        border: 1px solid $color-default-white;
-      }
-    }
-
-    &:has(input:disabled, textarea:disabled) {
-      .custom-input__label,
-      .custom-textarea__label {
-        opacity: 0.8;
-      }
-
-      input,
-      textarea {
-        background-color: rgba($color-default-white, 0.2);
-        border-color: rgba($color-default-white, 0.4);
-        pointer-events: none;
-      }
-    }
   }
 
   input,
@@ -117,6 +77,48 @@
       textarea {
         padding: 11px 20px 12px;
       }
+    }
+  }
+}
+
+label {
+  @include hover {
+    &:not(:has(input:disabled, textarea:disabled)) {
+      .custom-input__label,
+      .custom-textarea__label {
+        opacity: 1;
+      }
+
+      input,
+      textarea {
+        border: 1px solid $color-default-white;
+      }
+    }
+  }
+
+  @include focus-within {
+    .custom-input__label,
+    .custom-textarea__label {
+      opacity: 1;
+    }
+
+    input,
+    textarea {
+      border: 1px solid $color-default-white;
+    }
+  }
+
+  &:has(input:disabled, textarea:disabled) {
+    .custom-input__label,
+    .custom-textarea__label {
+      opacity: 0.8;
+    }
+
+    input,
+    textarea {
+      background-color: rgba($color-default-white, 0.2);
+      border-color: rgba($color-default-white, 0.4);
+      pointer-events: none;
     }
   }
 }
