@@ -3122,6 +3122,7 @@ button,
   padding: 29px 43px 29px 59px;
   border: 1px solid #f0efe9;
   border-radius: 16px;
+  gap: 0 10px;
 }
 
 .features__item::before {
