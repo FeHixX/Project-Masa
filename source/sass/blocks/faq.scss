@@ -38,16 +38,22 @@
 }
 
 .faq__item {
-  padding: 39px;
   border: 1px solid $color-cerulean-blue;
   border-radius: 16px;
   transition: background-color $trans-default;
+  cursor: pointer;
 
-  @include hover-focus-within {
-    &:not(.is-active) {
+  &:not(.is-active) {
+    &:has(.faq__button:active) {
+      h3 {
+        color: $color-endeavour;
+      }
+    }
+
+    @include hover-focus-within {
       background-color: $color-default-white;
 
-      .faq__button:not(:active) {
+      .faq__button {
         background-color: $color-default-white;
         border-color: $color-cerulean-blue;
 
@@ -55,33 +61,47 @@
         &::after {
           background-color: $color-cerulean-blue;
         }
+
+        @include active {
+          background-color: $color-endeavour;
+          border-color: $color-endeavour;
+
+          &::before,
+          &::after {
+            background-color: $color-default-white;
+          }
+        }
+      }
+    }
+
+    @include active {
+      h3 {
+        color: $color-endeavour;
+      }
+
+      .faq__button {
+        background-color: $color-endeavour;
+        border-color: $color-endeavour;
+
+        &::before,
+        &::after {
+          background-color: $color-default-white;
+        }
       }
     }
   }
 
-  &:has(.faq__button:active) {
-    h3 {
-      color: $color-endeavour;
-    }
-  }
-
-  @include tablet {
-    padding: 29px;
-  }
-
   @include mobile {
-    padding: 19px 14px;
     border-radius: 14px;
   }
 }
 
-.faq__item.is-active:has(.faq__button:active) {
-  background-color: $color-endeavour;
-}
-
 .faq__item.is-active {
-  padding-bottom: 32px;
   background-color: $color-cerulean-blue;
+
+  &:has(.faq__button:active) {
+    background-color: $color-endeavour;
+  }
 
   @include hover-focus-within {
     .faq__button {
@@ -93,6 +113,35 @@
       }
     }
   }
+
+  @include active {
+    background-color: $color-endeavour;
+
+    .faq__button {
+      background-color: $color-default-white;
+      border-color: $color-default-white;
+
+      &::before {
+        background-color: $color-endeavour;
+      }
+    }
+  }
+}
+
+.faq__content {
+  padding: 39px;
+
+  @include tablet {
+    padding: 29px;
+  }
+
+  @include mobile {
+    padding: 19px 14px;
+  }
+}
+
+.faq__item.is-active .faq__content {
+  padding-bottom: 32px;
 
   @include tablet {
     padding-bottom: 25px;
@@ -157,6 +206,31 @@
   cursor: pointer;
   transition: background-color $trans-default;
 
+  &::before {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 1px;
+    margin: auto;
+    background-color: $color-default-white;
+    transition: background-color $trans-default;
+    inset: 0;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 18px;
+    margin: auto;
+    background-color: $color-default-white;
+    opacity: 1;
+    transition:
+      background-color $trans-default,
+      opacity $trans-default;
+    inset: 0;
+  }
+
   @include hover-focus {
     background-color: $color-transparent;
 
@@ -186,31 +260,6 @@
     &::after {
       background-color: $color-default-white;
     }
-  }
-
-  &::before {
-    content: "";
-    position: absolute;
-    width: 18px;
-    height: 1px;
-    margin: auto;
-    background-color: $color-default-white;
-    transition: background-color $trans-default;
-    inset: 0;
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    width: 1px;
-    height: 18px;
-    margin: auto;
-    background-color: $color-default-white;
-    opacity: 1;
-    transition:
-      background-color $trans-default,
-      opacity $trans-default;
-    inset: 0;
   }
 }
 

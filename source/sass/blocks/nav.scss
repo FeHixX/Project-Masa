@@ -60,6 +60,10 @@
   }
 }
 
+.nav__icon-menu {
+  transition: transform $trans-default;
+}
+
 .nav__subnav-list {
   display: flex;
   flex-direction: column;
@@ -92,5 +96,5 @@
 }
 
 .nav__item.is-active .nav__icon-menu {
-  transform: rotate(180deg);
+  transform: scale(-1);
 }
