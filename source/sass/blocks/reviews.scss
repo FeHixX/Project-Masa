@@ -51,6 +51,7 @@
 .reviews__item {
   display: flex;
   flex-direction: column;
+  height: auto;
   padding: 50px 49px 42px;
   border: 1px solid $color-cerulean-blue;
   border-radius: 16px;

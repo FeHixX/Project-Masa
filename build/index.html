@@ -19,7 +19,7 @@
 
   <body>
     <div class="wrapper">
-      <header class="header">
+      <header class="header" data-header>
         <div class="header__container container">
           <a class="header__logo" href="./" aria-label="Логотип сайта: «Маса».">
             <svg class="header__logo-image" width="52" height="52" aria-hidden="true" focusable="false">
@@ -227,6 +227,12 @@
         <section class="programs" id="programs">
           <div class="programs__container container">
             <h2 class="programs__title title">Программы</h2>
+            <a class="programs__button button" href="#!">
+              Все программы
+              <svg width="10" height="10" aria-hidden="true" focusable="false">
+                <use href="./img/sprite.svg#arrow"></use>
+              </svg>
+            </a>
             <div class="programs__slider swiper">
               <ul class="programs__list swiper-wrapper">
                 <li class="programs__item swiper-slide">
@@ -330,12 +336,6 @@
                 </button>
               </div>
             </div>
-            <a class="programs__button button" href="#!">
-              Все программы
-              <svg width="10" height="10" aria-hidden="true" focusable="false">
-                <use href="./img/sprite.svg#arrow"></use>
-              </svg>
-            </a>
           </div>
         </section>
         <section class="details" id="details">

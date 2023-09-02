@@ -11,6 +11,10 @@
   visibility: hidden;
   transition: all $trans-default;
 
+  @media (max-height: 485px) {
+    max-height: 61.5vh;
+  }
+
   @include mobile {
     width: calc(100% - 30px);
   }

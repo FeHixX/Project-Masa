@@ -91,6 +91,7 @@
   }
 
   @include mobile {
+    max-width: 100%;
     margin: 0 0 40px;
     gap: 11px 0;
 

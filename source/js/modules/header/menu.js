@@ -2,6 +2,7 @@ const addToggleMenu = () => {
   const OPENED_CLASS = 'is-opened';
   const LINK_CLASS = 'a';
   const root = document.querySelector('.header');
+  const logo = root.querySelector('.header__logo');
   const toggle = root.querySelector('.header__toggle');
   const nav = root.querySelector('.nav');
 
@@ -25,6 +26,8 @@ const addToggleMenu = () => {
     document.addEventListener('click', isMenu);
     nav.addEventListener('click', onLinkClick);
     window.scrollLock.disableScrolling();
+    logo.removeAttribute('href');
+    window.focusLock.lock('[data-header]');
   };
 
   const closeMenu = () => {
@@ -35,6 +38,8 @@ const addToggleMenu = () => {
     document.removeEventListener('click', isMenu);
     nav.removeEventListener('click', onLinkClick);
     window.scrollLock.enableScrolling();
+    logo.setAttribute('href', './');
+    window.focusLock.unlock('[data-header]');
   };
 
   toggle.addEventListener('click', () => {

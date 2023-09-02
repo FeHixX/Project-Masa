@@ -2901,6 +2901,9 @@ button,
   align-items: flex-start;
   padding-top: 409px;
   padding-bottom: 60px;
+  visibility: hidden;
+  -webkit-transition: visibility 0.3s ease;
+  transition: visibility 0.3s ease;
 }
 
 .hero__content h3 {
@@ -2913,6 +2916,10 @@ button,
   color: #316dc2;
   background-color: #ffffff;
   border-radius: 0 30px 30px 0;
+}
+
+.swiper-slide-active .hero__content {
+  visibility: visible;
 }
 
 .hero__content .hero__pagination {
@@ -4037,6 +4044,7 @@ button,
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+  height: auto;
   padding: 50px 49px 42px;
   border: 1px solid #316dc2;
   border-radius: 16px;
@@ -5972,6 +5980,7 @@ button,
   }
 
   .about__body-text {
+    max-width: 100%;
     margin: 0 0 40px;
     gap: 11px 0;
   }
@@ -6025,7 +6034,7 @@ button,
 
   .programs__container {
     padding-top: 35px;
-    padding-bottom: 67px;
+    padding-bottom: 139px;
   }
 
   .programs__title {
@@ -6034,14 +6043,16 @@ button,
   }
 
   .programs__button {
-    position: relative;
+    top: auto;
+    right: auto;
+    bottom: 67px;
+    left: 15px;
     padding-right: 68px;
     padding-left: 29px;
-    inset: 0;
   }
 
   .programs__slider {
-    margin: 0 0 30px;
+    margin: 0;
     overflow: hidden;
   }
 
@@ -6585,5 +6596,11 @@ button,
   .leaflet-control {
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
+  }
+}
+
+@media (max-height: 485px) {
+  .nav {
+    max-height: 61.5vh;
   }
 }
